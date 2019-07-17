@@ -1,0 +1,474 @@
+body {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+/*------------------ Landing & Login Pages ------------------*/
+#landing {
+  padding: 30px; }
+
+#login-bar {
+  padding: 0px;
+  background-color: #89dda5;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px; }
+
+#login-menu {
+  padding: 30px; }
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*------------------ Social Registration Screen ------------------*/
+.form-control {
+  font-size: 16px;
+  transition: all 0.4s;
+  box-shadow: none;
+}
+.form-control:focus {
+      border-color: #5cb85c;
+  }
+  .form-control, .btn {
+      border-radius: 50px;
+  outline: none !important;
+  }
+.signup-form {
+  width: 480px;
+    margin: 0 auto;
+  padding: 30px 0;
+}
+  .signup-form form {
+  border-radius: 5px;
+    margin-bottom: 20px;
+      background: #fff;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+  }
+.signup-form a {
+  color: #5cb85c;
+}    
+.signup-form h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 10px 0 15px;
+}
+.signup-form .hint-text {
+  color: #999;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.signup-form .form-group {
+  margin-bottom: 20px;
+}
+  .signup-form .btn {        
+      font-size: 18px;
+  line-height: 26px;
+      font-weight: bold;
+  text-align: center;
+  }
+.signup-btn {
+  text-align: center;
+  border-color: #5cb85c;
+  transition: all 0.4s;
+}
+.signup-btn:hover {
+  background: #5cb85c;
+  opacity: 0.8;
+}
+  .or-seperator {
+      margin: 50px 0 15px;
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+  }
+  .or-seperator b {
+      padding: 0 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+  display: inline-block;
+      border: 1px solid #e0e0e0;
+  border-radius: 50%;
+      position: relative;
+      top: -22px;
+      z-index: 1;
+  }
+  .social-btn .btn {
+  color: #fff;
+      margin: 10px 0 0 15px;
+  font-size: 15px;
+  border-radius: 50px;
+  font-weight: normal;
+  border: none;
+  transition: all 0.4s;
+  }	
+.social-btn .btn:first-child {
+  margin-left: 0;
+}
+.social-btn .btn:hover {
+  opacity: 0.8;
+}
+.social-btn .btn-primary {
+  background: #507cc0;
+}
+.social-btn .btn-info {
+  background: #64ccf1;
+}
+.social-btn .btn-danger {
+  background: #df4930;
+}
+.social-btn .btn i {
+  float: left;
+  margin: 3px 10px;
+  font-size: 20px;
+}
+
+
+/*------------------ Social Login Screen ------------------*/
+.form-control {
+  font-size: 16px;
+  transition: all 0.4s;
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: #5cb85c;
+}
+.form-control, .btn {
+  border-radius: 50px;
+  outline: none !important;
+}
+.signin-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.signin-form form {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+}
+.signin-form a {
+  color: #5cb85c;
+}    
+.signin-form h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 10px 0 15px;
+}
+.signin-form .hint-text {
+  color: #999;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.signin-form .form-group {
+  margin-bottom: 20px;
+}
+.signin-form .btn {        
+  font-size: 18px;
+  line-height: 26px;        
+  font-weight: bold;
+  text-align: center;
+}
+.signin-form .small {
+  font-size: 13px;
+}
+.signup-btn {
+  text-align: center;
+  border-color: #5cb85c;
+  transition: all 0.4s;
+}
+.signup-btn:hover {
+  background: #5cb85c;
+  opacity: 0.8;
+}
+.or-seperator {
+  margin: 50px 0 15px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+  padding: 0 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  position: relative;
+  top: -22px;
+  z-index: 1;
+}
+.social-btn .btn {
+  color: #fff;
+  margin: 10px 0 0 30px;
+  font-size: 15px;
+  width: 55px;
+  height: 55px;
+  line-height: 38px;
+  border-radius: 50%;
+  font-weight: normal;
+  text-align: center;
+  border: none;
+  transition: all 0.4s;
+}	
+.social-btn .btn:first-child {
+  margin-left: 0;
+}
+.social-btn .btn:hover {
+  opacity: 0.8;
+}
+.social-btn .btn-primary {
+  background: #507cc0;
+}
+.social-btn .btn-info {
+  background: #64ccf1;
+}
+.social-btn .btn-danger {
+  background: #df4930;
+}
+.social-btn .btn i {
+  font-size: 20px;
+}
+
+
+/*------------------ Main Pain Page ------------------*/
+.main-div {
+  height: 99vh;
+  width: 99vw;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.visual-nav {
+  height: 98.5vh;
+  /* width: auto; */
+  border-style: solid;
+  border-color: blue;
+}
+.visual-nav img {
+  height: 98vh;
+  z-index: -2;
+}
+.visual-nav button {
+  font-style: italic;
+}
+
+.R-div {
+  height: 98.5vh;
+  width: 99vw;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  /* border-style: solid;
+  border-color: green; */
+}
+.R-div h6 {
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+.top-window {
+  height: 35vh;
+  padding: 0 7px;
+  border-style: solid;
+  border-color: pink;
+}
+.bottom-windows {
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+}
+.bottom-L-window {
+  height: 64vh;
+  width: 50%;
+  padding: 0 7px;
+  border-style: solid;
+  border-color: violet;
+  overflow: auto;
+}
+.bottom-R-window {
+  height: 64vh;
+  width: 50%;
+  padding: 0 7px;
+  border-style: solid;
+  border-color: rgb(238, 130, 130);
+  overflow: auto;
+}
+.image-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.image-row > img {
+  height: 18vh;
+}
+.smr-card {
+  border-style: solid;
+  border-width: thin;
+  color: white;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.smr-card > img {
+  height: 16vh;
+  margin: 5px 0;
+}
+.stretch-card {
+  border-style: solid;
+  border-width: thin;
+  color: white;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.stretch-card > img {
+  height: 16vh;
+  margin: 5px 0;
+}
+.directions {
+  font-size: 16px;
+}
+
+/*------------------ Main Page Buttons ------------------*/
+.neck-frwd-btn {
+  position: relative;
+  bottom: 965px;
+  left: 250px;
+}
+.neck-asym-btn {
+  position: relative;
+  bottom: 1020px;
+  right: 250px;
+}
+.shoulders-btn {
+  position: relative;
+  bottom: 800px;
+  right: 70px;
+}
+.back-frwd-btn {
+  position: relative;
+  bottom: 585px;
+  left: 250px;
+}
+.back-rnd-btn {
+  position: relative;
+  bottom: 585px;
+}
+.back-asym-btn {
+  position: relative;
+  bottom: 585px;
+  right: 250px;
+}
+.wrists-btn1 {
+  position: relative;
+  bottom: 380px;
+  left: 250px;
+}
+.wrists-btn2 {
+  position: relative;
+  bottom: 430px;
+  right: 250px;
+}
+
+/*------------------ Glow Button ------------------*/
+.glow-on-hover {
+    width: 140px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background-color:rgba(212, 199, 199, 0.1);
+    backdrop-filter: alpha(opacity=10);
+    border-radius: 20px;
+    -webkit-filter: alpha(opacity=10);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #fffb00, #00ffd5, #FFFFFF);
+    position: absolute;
+    top: -5px;
+    left:-4.5px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/*------------------ ??? ------------------*/
+
+
+
+/*------------------ ??? ------------------*/
+
+
+
+/*------------------ ??? ------------------*/
+
+
+
+/*# sourceMappingURL=style.css.map */

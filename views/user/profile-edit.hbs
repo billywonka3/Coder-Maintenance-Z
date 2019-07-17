@@ -1,0 +1,13 @@
+<h1>Welcome {{user.username}}</h1>
+
+<p>this is {{user.username}}'s private page</p>
+
+<form action="/logout" method="POST">
+  <button class="logout-btn">Logout</button>
+</form>
+
+{{#if user}}
+  <div>
+    <a href="/">Index</a>
+  </div>
+{{/if}}
