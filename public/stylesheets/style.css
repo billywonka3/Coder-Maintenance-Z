@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
 body {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
+
+#custom-section{
+  display: flex;
+  justify-content: space-around;
+}
+
+.rightside div{
+    margin: 10px;
+}
 
 /*------------------ Landing & Login Pages ------------------*/
 #landing {
@@ -284,6 +295,7 @@ a {
   font-weight: bold;
   margin-bottom: 12px;
 }
+
 .top-window {
   height: 36vh;
   padding: 0 12px;
@@ -291,9 +303,15 @@ a {
   border-bottom: none;
   /* border-color: rgb(84, 170, 223); */
 }
-.top-window img {
-  margin-top: 10px;
+.image-row {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: auto;
 }
+.image-row img {
+  height: 17vh;
+}
+
 .bottom-windows {
   height: 64vh;
   display: flex;
@@ -317,18 +335,11 @@ a {
   overflow: auto;
 }
 
-.image-row {
-  display: flex;
-  justify-content: space-evenly;
-}
-.image-row img {
-  height: 18vh;
-}
 .smr-card {
   border-style: solid;
   border-width: thin;
   color: white;
-  padding: 5px;
+  padding: 5px 45px;
   margin-bottom: 10px;
 }
 .smr-card > img {
@@ -339,7 +350,7 @@ a {
   border-style: solid;
   border-width: thin;
   color: white;
-  padding: 5px;
+  padding: 5px 45px;
   margin-bottom: 10px;
 }
 .stretch-card > img {
@@ -353,6 +364,9 @@ a {
 }
 .directions {
   font-size: 16px;
+}
+.warning {
+  color: rgb(236, 60, 90);
 }
 .trapezius {
   width: 237px;
@@ -494,13 +508,9 @@ a {
 
 @keyframes glowing {
     0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
+    50% { background-position: 0 0; }
     100% { background-position: 0 0; }
 }
-
-/*------------------ ??? ------------------*/
-
-
 
 /*------------------ ??? ------------------*/
 

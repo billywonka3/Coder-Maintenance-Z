@@ -3,17 +3,17 @@ mongoose.plugin(schema => { schema.options.usePushEach = true; }); // this is us
 const Schema   = mongoose.Schema;
 
 
-const bodySchema = new Schema({
-  causes: {
+const customSchema = new Schema({
+  image: {
     type: String
   },
-  smr: {
+  title: {
     type: String
   },
-  stretch: {
+  desciption: {
     type: String
   }
 }, { timestamps: true });
 
-const Body = mongoose.model('Body', bodySchema);
-module.exports = Body;
+const Body = mongoose.model('Custom', customSchema);
+module.exports = Custom;
