@@ -245,9 +245,9 @@ a {
 
 /*------------------ Main Pain Page ------------------*/
 .main-div {
-  height: 99vh;
-  width: 99vw;
-  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  /* padding: 10px; */
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -255,13 +255,14 @@ a {
 }
 
 .visual-nav {
-  height: 98.5vh;
+  height: 99vh;
   /* width: auto; */
-  border-style: solid;
-  border-color: blue;
+  /* border-style: solid; */
+  /* border-color: rgb(22, 134, 204);; */
 }
 .visual-nav img {
-  height: 98vh;
+  height: 98.65vh;
+  padding-top: 0.35vh;
   z-index: -2;
 }
 .visual-nav button {
@@ -269,28 +270,32 @@ a {
 }
 
 .R-div {
-  height: 98.5vh;
+  height: 99vh;
   width: 99vw;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   display: flex;
   flex-direction: column;
-  background: black;
+  background: rgb(49, 45, 45);
   color: white;
   /* border-style: solid;
   border-color: green; */
 }
 .R-div h6 {
   font-weight: bold;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .top-window {
-  height: 35vh;
-  padding: 0 7px;
+  height: 36vh;
+  padding: 0 12px;
   border-style: solid;
-  border-color: pink;
+  border-bottom: none;
+  /* border-color: rgb(84, 170, 223); */
+}
+.top-window img {
+  margin-top: 10px;
 }
 .bottom-windows {
-  height: 65vh;
+  height: 64vh;
   display: flex;
   flex-direction: row;
 }
@@ -299,7 +304,7 @@ a {
   width: 50%;
   padding: 0 7px;
   border-style: solid;
-  border-color: violet;
+  /* border-color: rgb(22, 134, 204); */
   overflow: auto;
 }
 .bottom-R-window {
@@ -307,14 +312,16 @@ a {
   width: 50%;
   padding: 0 7px;
   border-style: solid;
-  border-color: rgb(238, 130, 130);
+  border-left: none;
+  /* border-color: rgb(34, 116, 167); */
   overflow: auto;
 }
+
 .image-row {
   display: flex;
   justify-content: space-evenly;
 }
-.image-row > img {
+.image-row img {
   height: 18vh;
 }
 .smr-card {
@@ -339,8 +346,40 @@ a {
   height: 16vh;
   margin: 5px 0;
 }
+.card-title {
+  font-style: italic;
+  text-decoration: underline;
+  margin-top: 7.5px;
+}
 .directions {
   font-size: 16px;
+}
+.trapezius {
+  width: 237px;
+}
+
+/*------------------ Customized Div Scrollbars ------------------*/
+.style-7::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.style-7::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+.style-7::-webkit-scrollbar-thumb
+{
+	border-radius: 20px;
+	background-image: -webkit-gradient(linear,									   left bottom,									   left top,									   color-stop(0.44, rgb(122,153,217)),									   color-stop(0.72, rgb(73,125,189)),									   color-stop(0.86, rgb(28,58,148)));
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
 }
 
 /*------------------ Main Page Buttons ------------------*/
@@ -351,7 +390,7 @@ a {
 }
 .neck-asym-btn {
   position: relative;
-  bottom: 1020px;
+  bottom: 1016px;
   right: 250px;
 }
 .shoulders-btn {
