@@ -15,6 +15,6 @@ const customSchema = new Schema({
   }
 }, { timestamps: true });
 
-const Body = mongoose.model('Custom', customSchema);
+const Custom = mongoose.model('Custom', customSchema);
 
 module.exports = Custom;

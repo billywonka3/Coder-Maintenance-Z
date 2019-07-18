@@ -18,6 +18,7 @@ const passport      = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
 const flash         = require("connect-flash");
+const axios         = require("axios");
 //----------------------------------------------
 
 mongoose.Promise = Promise;

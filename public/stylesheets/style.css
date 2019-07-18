@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
 body {
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
@@ -260,8 +260,8 @@ a {
 }
 #logout-btn {
   position: absolute;
-  top: 1px;
-  right: 1px;
+  /* top: 1px;
+  right: 1px; */
 }
 
 /*------------------ Main Pain Page ------------------*/
@@ -312,11 +312,11 @@ a {
   border-style: solid;
   border-bottom: none;
   /* border-color: rgb(84, 170, 223); */
+  overflow: auto;
 }
 .image-row {
   display: flex;
   justify-content: space-evenly;
-  overflow: auto;
 }
 .image-row img {
   height: 17vh;
