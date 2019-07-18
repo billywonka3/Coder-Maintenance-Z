@@ -3,6 +3,7 @@ const router        = express.Router();
 const bcrypt        = require('bcrypt');
 
 const User          = require('../models/user');
+// const Custom        = require('../models/custom');
 
 const passport      = require('passport');
 const ensureLogin   = require("connect-ensure-login");
@@ -55,7 +56,7 @@ router.post("/login", passport.authenticate("local", {
 // Logout Route
 router.post('/logout', (req, res, next)=>{
   req.logout();
-  res.render("user/login", { "message": req.flash("You have been logged out") });
+  res.render("index", { "message": req.flash("You have been logged out") });
 })
 
 
@@ -64,52 +65,26 @@ router.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("user/profile-edit", { user: req.user });
 });
 
-document.getElementById('custom-btn').onclick = ()=>{
-  let list = document.getElementById('list-of-custom')
-  console.log(list)
-  
-  axios.get('https://coder-maintenance.herokuapp.com/profile')
-  .then((response)=>{
-      list.innerHTML = "";
-      
-      response.data.forEach((eachOne)=>{
-         let newCard = document.createElement('div');
-         newCard.innerHTML = `
-          <div class="smr-card">
-            <img src="${eachOne.image}">
-            <p class="card-title"> ${eachOne.title} </p>
-            <p class="directions"> ${eachOne.description} </p>
-            <p> ---------------------------- </p> 
-          </div>
-          `
-         list.appendChild(newCard); 
-      })
-  })
-  .catch((err)=>{
-      console.log(err);
-  })
-}
 
-document.getElementById('add-new-btn').onclick = ()=>{
-  let image = document.getElementById('new-image');
-  let title = document.getElementById('new-title');
-  let description = document.getElementById('new-description');
+router.get('/profile', (req, res, next)=>{
+  Custom.findById(req.params.customID)
+    .then((database)=>{
+            res.render('profile', {customRoutines: database})
+    })
+    .catch((err)=>{
+        next(err);
+    })
+})
 
-  axios.post('https://coder-maintenance.herokuapp.com/profile', {
-      image: image.value,
-      title: title.value,
-      description: description.value,
-  })
-  .then(()=>{
-      console.log('yay')
-      image.value = "";
-      title.value = "";
-      description.value = "";
-  })
-  .catch((err)=>{
-      console.log(err);
-  })
-}
-
+router.post("/profile", (req, res, next)=>{
+  let theID = req.params.customID;
+  Custom.findByIdAndUpdate(theID, req.body)
+    .then((custom)=>{
+        res.render('celebs/details/'+customID)
+    })
+    .catch((err)=>{
+        next(err);
+    })
+})
 
 module.exports = router;

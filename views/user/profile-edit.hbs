@@ -1,5 +1,5 @@
 {{#if user}}
-  <div>
+  <div class="profile-div">
     <h3> Profile Page </h3>
       <p> Name: {{user.name}} </p>
         <label> Edit Name : </label> 
@@ -13,7 +13,7 @@
         <label> Edit Email : </label> 
         <input id="edit-email" type="text">
         <br>
-      <p> Password: _________ </p>
+      <p> Password:  </p>
         <label> Edit Password : </label> 
         <input id="edit-password" type="text">
         <br>
@@ -22,11 +22,18 @@
         <input id="update-name" type="text">
       </div> --}}
   </div>
+  <div id="logout">
+    <form action="/logout" method="POST">
+      <button class="logout-btn">Logout</button>
+    </form>
+  </div>
+
+<hr>
 
   <div>
     <div id="custom-section">
       <div class="leftside">
-          <h3> Custom Routine </h3>
+          <h4> Custom Routine </h4>
           <button id="custom-btn"> Show Routine </button>
           <div id="list-of-custom">
             
@@ -59,12 +66,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div>
-    <a href="/">Index</a>
-    <form action="/logout" method="POST">
-      <button class="logout-btn">Logout</button>
-    </form>
   </div>
 {{/if}}

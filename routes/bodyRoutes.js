@@ -2,8 +2,6 @@ const express = require('express');
 const router  = express.Router();
 const bcrypt  = require('bcrypt');
 
-const Body    = require('../models/body');
-
 const passport = require('passport');
 const ensureLogin = require("connect-ensure-login");
 
