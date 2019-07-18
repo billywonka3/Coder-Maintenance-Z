@@ -6,7 +6,7 @@ document.getElementById('custom-btn').onclick = ()=>{
   let list = document.getElementById('list-of-custom')
   console.log(list)
   
-  axios.get('https://coder-maintenance.herokuapp.com/profile')
+  axios.get('mongodb://localhost/week6---coder-maintenance')
   .then((response)=>{
       list.innerHTML = "";
       

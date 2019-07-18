@@ -69,7 +69,7 @@ router.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
 router.get('/profile', (req, res, next)=>{
   Custom.findById(req.params.customID)
     .then((database)=>{
-            res.render('profile', {customRoutines: database})
+            res.render('user/profile-edit', {customRoutines: database})
     })
     .catch((err)=>{
         next(err);
@@ -80,7 +80,7 @@ router.post("/profile", (req, res, next)=>{
   let theID = req.params.customID;
   Custom.findByIdAndUpdate(theID, req.body)
     .then((custom)=>{
-        res.render('celebs/details/'+customID)
+        res.render('user/profile-edit'+customID)
     })
     .catch((err)=>{
         next(err);

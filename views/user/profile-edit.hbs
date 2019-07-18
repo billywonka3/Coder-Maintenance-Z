@@ -1,33 +1,39 @@
 {{#if user}}
-  <div class="profile-div">
+  <form action="/profile" method="POST" class="profile-div">
     <h3> Profile Page </h3>
-      <p> Name: {{user.name}} </p>
-        <label> Edit Name : </label> 
-        <input id="edit-name" type="text">
-        <br>
-      <p> City: {{user.city}} </p>
-        <label> Edit City : </label> 
-        <input id="edit-city" type="text">
-        <br>
-      <p> Email: {{user.email}} </p>
-        <label> Edit Email : </label> 
-        <input id="edit-email" type="text">
-        <br>
-      <p> Password:  </p>
-        <label> Edit Password : </label> 
-        <input id="edit-password" type="text">
-        <br>
-      {{!-- <div>
-        <label>Name : </label>
-        <input id="update-name" type="text">
-      </div> --}}
-  </div>
-  <div id="logout-btn">
+    <p> Name: {{user.name}} </p>
+      <label> Edit Name : </label> 
+      <input id="edit-name" type="text">
+      <br>
+    <p> City: {{user.city}} </p>
+      <label> Edit City : </label> 
+      <input id="edit-city" type="text">
+      <br>
+    <p> Email: {{user.email}} </p>
+      <label> Edit Email : </label> 
+      <input id="edit-email" type="text">
+      <br>
+    <p> Password:  </p>
+      <label> Edit Password : </label> 
+      <input id="edit-password" type="text">
+      <br>
+      <button id="update-btn">Update Profile</button>
+    {{!-- <div>
+      <label>Name : </label>
+      <input id="update-name" type="text">
+    </div> --}}
+  </form>
+  
+  <div id="profile-buttons">
+    <a href="/main">
+      <button class="main-btn">Back to Main</button>
+    </a>
     <form action="/logout" method="POST">
       <button class="logout-btn">Logout</button>
     </form>
   </div>
 
+<br>
 <hr>
 
   <div>
@@ -41,7 +47,7 @@
       </div>
 
       <div class="rightside">
-        <div>
+        <form action="/profile" method="POST">
           <h4>Add New Stretch</h4>
           <div>
             <label>Name of Exercise</label>
@@ -54,16 +60,14 @@
           <div>
             <br>
             <label>Upload an Image</label>
-            <input id="new-image" type="file" name="photo">
-            {{!-- <form action="/upload" method="post" enctype="multipart/form-data">
-              <input type="text" name="name">
-              <input type="file" name="photo">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+              <input id="new-image" type="file" name="photo">
               <input type="submit" value="Save">
-            </form> --}}
+            </form>
           </div>
           <br>
           <button id="add-new-btn">Create Card</button>
-        </div>
+        </form>
       </div>
     </div>
   </div>

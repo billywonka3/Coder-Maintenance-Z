@@ -37,7 +37,7 @@ a {
 
 /*------------------ Social Registration Screen ------------------*/
 .form-control {
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.4s;
   box-shadow: none;
 }
@@ -100,7 +100,7 @@ a {
       padding: 0 10px;
   width: 40px;
   height: 40px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   line-height: 40px;
   background: #fff;
@@ -144,7 +144,7 @@ a {
 
 /*------------------ Social Login Screen ------------------*/
 .form-control {
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.4s;
   box-shadow: none;
 }
@@ -210,7 +210,7 @@ a {
   padding: 0 10px;
   width: 40px;
   height: 40px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   line-height: 40px;
   background: #fff;
@@ -258,10 +258,14 @@ a {
   padding: 0 100px;
   width: 40%;
 }
-#logout-btn {
+#profile-buttons {
   position: absolute;
-  /* top: 1px;
-  right: 1px; */
+  top: 40px;
+  right: 50px;
+  display: flex;
+}
+.main-btn {
+  margin-right: 100px;
 }
 
 /*------------------ Main Pain Page ------------------*/
@@ -373,7 +377,7 @@ a {
   margin-top: 7.5px;
 }
 .directions {
-  font-size: 16px;
+  font-size: 14px;
 }
 .warning {
   color: rgb(236, 60, 90);
@@ -409,42 +413,42 @@ a {
 /*------------------ Main Page Buttons ------------------*/
 .neck-frwd-btn {
   position: relative;
-  bottom: 865px;
-  left: 250px;
+  bottom: 715px;
+  left: 200px;
 }
 .neck-asym-btn {
   position: relative;
-  bottom: 916px;
-  right: 250px;
+  bottom: 766px;
+  right: 200px;
 }
 .shoulders-btn {
   position: relative;
-  bottom: 750px;
-  right: 70px;
+  bottom: 625px;
+  right: 50px;
 }
 .back-frwd-btn {
   position: relative;
-  bottom: 585px;
-  left: 250px;
+  bottom: 535px;
+  left: 200px;
 }
 .back-rnd-btn {
   position: relative;
-  bottom: 585px;
+  bottom: 535px;
 }
 .back-asym-btn {
   position: relative;
-  bottom: 585px;
-  right: 250px;
+  bottom: 535px;
+  right: 200px;
 }
 .wrists-btn1 {
   position: relative;
   bottom: 380px;
-  left: 250px;
+  left: 200px;
 }
 .wrists-btn2 {
   position: relative;
   bottom: 430px;
-  right: 250px;
+  right: 200px;
 }
 
 /*------------------ Glow Button ------------------*/
