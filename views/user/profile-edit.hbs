@@ -1,74 +1,78 @@
-{{#if user}}
-  <form action="/profile" method="POST" class="profile-div">
-    <h3> Profile Page </h3>
-    <p> Name: {{user.name}} </p>
-      <label> Edit Name : </label> 
-      <input id="edit-name" type="text">
-      <br>
-    <p> City: {{user.city}} </p>
-      <label> Edit City : </label> 
-      <input id="edit-city" type="text">
-      <br>
-    <p> Email: {{user.email}} </p>
-      <label> Edit Email : </label> 
-      <input id="edit-email" type="text">
-      <br>
-    <p> Password:  </p>
-      <label> Edit Password : </label> 
-      <input id="edit-password" type="text">
-      <br>
+<body bgcolor="######" style="color:white">
+  {{#if user}}
+    <div id="profile-buttons">
+      <a href="/main">
+        <button class="main-btn">Back to Main</button>
+      </a>
+      <form action="/logout" method="POST">
+        <button class="logout-btn">Logout</button>
+      </form>
+    </div>
+    <hr>
+
+    <img src="images/x-ray-cameraman.jpg" class="x-camera" >
+
+    <form action="/profile" method="POST" enctype="multipart/form-data" class="profile-div">
+      <h3> Profile Page </h3>
+      <p> Name: {{user.name}} </p>
+        <label> Edit : </label> 
+        <input id="edit-name" type="text">
+        <br>
+      <p> City: {{user.city}} </p>
+        <label> Edit : </label> 
+        <input id="edit-city" type="text">
+        <br>
+      <p> Email: {{user.email}} </p>
+        <label> Edit : </label> 
+        <input id="edit-email" type="text">
+        <br>
+      <p> Password: </p>
+        <label> Edit : </label> 
+        <input id="edit-password" type="text">
+        <br>
       <button id="update-btn">Update Profile</button>
-    {{!-- <div>
-      <label>Name : </label>
-      <input id="update-name" type="text">
-    </div> --}}
-  </form>
-  
-  <div id="profile-buttons">
-    <a href="/main">
-      <button class="main-btn">Back to Main</button>
-    </a>
-    <form action="/logout" method="POST">
-      <button class="logout-btn">Logout</button>
+      {{!-- <div>
+        <label>Name : </label>
+        <input id="update-name" type="text">
+      </div> --}}
     </form>
-  </div>
 
-<br>
-<hr>
+    <br>
+    <hr>
 
-  <div>
     <div id="custom-section">
-      <div class="leftside">
+      {{!-- <div class="leftside">
           <h4> Custom Routine </h4>
           <button id="custom-btn"> Show Routine </button>
           <div id="list-of-custom">
             
           </div>
-      </div>
+      </div> --}}
 
       <div class="rightside">
-        <form action="/profile" method="POST">
-          <h4>Add New Stretch</h4>
-          <div>
+        <form action="/profile" method="POST" enctype="multipart/form-data">
+          <h4>Add a Stretch to your Routines </h4>
+
             <label>Name of Exercise</label>
             <input id="new-title" type="text">
-          </div>
-          <div>
+
+
             <label>Write a Brief Description</label>
             <input id="new-description" type="text">
-          </div>
-          <div>
+
             <br>
             <label>Upload an Image</label>
             <form action="/upload" method="post" enctype="multipart/form-data">
               <input id="new-image" type="file" name="photo">
               <input type="submit" value="Save">
             </form>
-          </div>
-          <br>
+            <br>
+
           <button id="add-new-btn">Create Card</button>
+          <a href="/custom" class="routines-link"> See Routines List </a>
         </form>
       </div>
+
     </div>
-  </div>
-{{/if}}
+  {{/if}}
+</body>

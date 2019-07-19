@@ -7,7 +7,7 @@ const customSchema = new Schema({
   image: {
     type: String
   },
-  title: {
+  name: {
     type: String
   },
   desciption: {

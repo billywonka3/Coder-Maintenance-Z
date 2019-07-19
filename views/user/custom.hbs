@@ -1,0 +1,21 @@
+<body #id="custom-page" bgcolor="######" style="color:white">
+  <h1> Custom Routine </h1>
+
+  {{#each exercise}}
+    <div class="smr-card">
+      <img src="${{this.image}}">
+      <p class="card-title"> ${{this.title}} </p>
+      <p class="directions"> ${{this.description}} </p>
+    </div>
+    <hr>
+  {{/each}}
+
+    <div id="profile-buttons">
+      <a href="/main">
+        <button class="main-btn">Back to Main</button>
+      </a>
+      <form action="/logout" method="POST">
+        <button class="logout-btn">Logout</button>
+      </form>
+    </div>  
+</body>

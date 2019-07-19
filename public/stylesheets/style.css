@@ -6,33 +6,83 @@ body {
 a {
   color: #00B7FF; }
 
-#custom-section{
-  display: flex;
-  justify-content: space-around;
-}
-
-.rightside div{
-    margin: 10px;
-}
-
 /*------------------ Landing & Login Pages ------------------*/
-#landing {
-  padding: 30px; }
+.landing-background {
+  background-image: url(/images/backgrounds/japanese-doors3.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+#landing-title {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 80px 0;
+}
+#landing-text {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+}
+/* 
+#landing1 {
+  background-image: url(/images/backgrounds/.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  padding-left: 75px;
+  width: 400px;
+}
+#landing2 {
+  background-image: url(/images/backgrounds/.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  padding-left: 75px;
+  width: 550px;
+}
+#landing3 {
+  background-image: url(/images/backgrounds/.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  padding-left: 75px;
+  width: 510px;
+} */
 
+.signup-background {
+  background-image: url(/images/backgrounds/simple-home-office-valcucine-1.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+.login-background {
+  background-image: url(/images/backgrounds/japanese-paper-doors.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 #login-bar {
-  padding: 0px;
+  height: 40px;
   background-color: #89dda5;
   display: flex;
   justify-content: space-around;
   font-size: 18px; }
-
+#login-bar > div > a {
+  position: absolute;
+  top: -15px;
+}
 #login-menu {
   padding: 30px; }
-
 .error-message {
   color: red;
   font-size: 18px;
   text-align: center;
+}
+.x-camera {
+position: absolute;
+top: 125px;
+right: 125px;
+width: 300px;
+}
+#custom-page {
+  padding: 50px;
 }
 
 /*------------------ Social Registration Screen ------------------*/
@@ -42,11 +92,11 @@ a {
   box-shadow: none;
 }
 .form-control:focus {
-      border-color: #5cb85c;
+    border-color: #5cb85c;
   }
   .form-control, .btn {
-      border-radius: 50px;
-  outline: none !important;
+    border-radius: 50px;
+    outline: none !important;
   }
 .signup-form {
   width: 480px;
@@ -156,7 +206,7 @@ a {
   outline: none !important;
 }
 .signin-form {
-  width: 400px;
+  width: 425px;
   margin: 0 auto;
   padding: 30px 0;
 }
@@ -253,10 +303,109 @@ a {
   font-size: 20px;
 }
 
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-btns .btn.facebook:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.facebook .fa {
+  color: #3b5998;
+}
+.social-btns .btn.twitter:before {
+  background-color: #3cf;
+}
+.social-btns .btn.twitter .fa {
+  color: #3cf;
+}
+.social-btns .btn.google:before {
+  background-color: #dc4a38;
+}
+.social-btns .btn.google .fa {
+  color: #dc4a38;
+}
+.social-btns .btn.dribbble:before {
+  background-color: #f26798;
+}
+.social-btns .btn.dribbble .fa {
+  color: #f26798;
+}
+.social-btns .btn.skype:before {
+  background-color: #00aff0;
+}
+.social-btns .btn.skype .fa {
+  color: #00aff0;
+}
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.social-btns {
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  /* position: absolute; */
+  /* top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+
+.center-it {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 95px;
+}
+
 /*------------------ ??? ------------------*/
 .profile-div {
   padding: 0 100px;
-  width: 40%;
+  width: 50%;
 }
 #profile-buttons {
   position: absolute;
@@ -266,6 +415,34 @@ a {
 }
 .main-btn {
   margin-right: 100px;
+}
+
+#custom-section{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  margin : 75px 0 100px 300px;
+}
+
+.rightside div{
+    margin: 8px;
+}
+.routines-link {
+  float: right;
+  margin-top: 10px;
+}
+.profile-link {
+  position: absolute;
+  top: 1.5%;
+  right: 2.7%;
+  font-size: 12px;
+  color: yellow;
+}
+.gear-link {
+  width: 16px;
+  position: absolute;
+  top: 1.2%;
+  right: 1.2%;
 }
 
 /*------------------ Main Pain Page ------------------*/
@@ -297,13 +474,18 @@ a {
 .R-div {
   height: 99vh;
   width: 99vw;
-  /* margin-left: 10px; */
-  display: flex;
+  /*margin-left: 10px;
+  */display: flex;
   flex-direction: column;
-  background: rgb(49, 45, 45);
+  background: #45484d; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: white;
   /* border-style: solid;
   border-color: green; */
+  -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
 }
 .R-div h6 {
   font-weight: bold;
@@ -383,7 +565,7 @@ a {
   color: rgb(236, 60, 90);
 }
 .trapezius {
-  width: 237px;
+  width: 188px;
 }
 
 /*------------------ Customized Div Scrollbars ------------------*/
@@ -396,7 +578,7 @@ a {
 
 .style-7::-webkit-scrollbar
 {
-	width: 8px;
+	width: 5px;
 	background-color: #F5F5F5;
 }
 
