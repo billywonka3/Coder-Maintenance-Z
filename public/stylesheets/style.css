@@ -6,7 +6,18 @@ body {
 a {
   color: #00B7FF; }
 
-/*------------------ Landing & Login Pages ------------------*/
+/*------------------ Landing Page ------------------*/
+#login-bar {
+  height: 40px;
+  background-color: #89dda5;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px; }
+#login-bar > div > a {
+  position: absolute;
+  top: -15px;
+}
+
 .landing-background {
   background-image: url(/images/backgrounds/forest-stream-hd.jpg); 
   background-size: cover; 
@@ -18,14 +29,14 @@ a {
 #landing-title {
   display: flex;
   justify-content: center;
-  padding: 100px 0 80px 0;
+  padding: 100px 0 30px 0;
   /* color: rgb(32, 116, 185) */
 }
 #landing-text {
   display: flex;
   justify-content: center;
   padding: 0 200px;
-  color: ;
+  /* color: ; */
 }
 #landing-text2 {
   display: flex;
@@ -55,6 +66,32 @@ a {
   width: 510px;
 } */
 
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px
+}
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #009FFD;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06D6A0;
+}
+/*------------------ Login Pages ------------------*/
 .signup-background {
   background-image: url(/images/backgrounds/simple-home-office-valcucine-1.jpg); 
   background-size: cover; 
@@ -65,16 +102,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-#login-bar {
-  height: 40px;
-  background-color: #89dda5;
-  display: flex;
-  justify-content: space-around;
-  font-size: 18px; }
-#login-bar > div > a {
-  position: absolute;
-  top: -15px;
-}
+
 #login-menu {
   padding: 30px; }
 .error-message {
