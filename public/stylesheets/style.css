@@ -8,7 +8,7 @@ a {
 
 /*------------------ Landing & Login Pages ------------------*/
 .landing-background {
-  background-image: url(/images/backgrounds/japanese-doors3.jpg); 
+  background-image: url(/images/backgrounds/forest-stream-hd.jpg); 
   background-size: cover; 
   background-repeat: no-repeat;
   color: white;
@@ -19,11 +19,18 @@ a {
   display: flex;
   justify-content: center;
   padding: 100px 0 80px 0;
+  /* color: rgb(32, 116, 185) */
 }
 #landing-text {
   display: flex;
   justify-content: center;
-  width: 600px;
+  padding: 0 200px;
+  color: ;
+}
+#landing-text2 {
+  display: flex;
+  justify-content: center;
+  padding: 0 250px;
 }
 /* 
 #landing1 {
@@ -90,6 +97,7 @@ width: 300px;
   font-size: 14px;
   transition: all 0.4s;
   box-shadow: none;
+  opacity: 0.5;
 }
 .form-control:focus {
     border-color: #5cb85c;
