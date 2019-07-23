@@ -616,8 +616,11 @@ width: 300px;
   display: flex;
   justify-content: space-evenly;
 }
-.image-row img {
-  height: 20vh;
+.short {
+  width: 12vw;
+}
+.long {
+  width: 16vw;
 }
 
 .bottom-windows {
@@ -651,7 +654,7 @@ width: 300px;
   margin-bottom: 10px;
 }
 .smr-card > img {
-  height: 16vh;
+  width: 14vw;
   margin: 5px 0;
 }
 .stretch-card {
@@ -662,7 +665,7 @@ width: 300px;
   margin-bottom: 10px;
 }
 .stretch-card > img {
-  height: 16vh;
+  width: 14vw;
   margin: 5px 0;
 }
 .card-title {
