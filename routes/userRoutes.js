@@ -68,8 +68,8 @@ router.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
 
 // router.get('/profile', (req, res, next)=>{
 //   Custom.findById(req.params.customID)
-//     .then((database)=>{
-//             res.render('user/profile-edit', {customRoutines: database})
+//     .then((user)=>{
+//             res.render('user/profile-edit', {customRoutines: user})
 //     })
 //     .catch((err)=>{
 //         next(err);
@@ -99,15 +99,15 @@ router.get('/custom', (req, res, next)=>{
   })
 })
 
-router.post('/create-routine', uploadMagic.single('photo') ,(req, res, next)=>{
+router.post('/create-routine', uploadMagic.single('image') ,(req, res, next)=>{
   let name = req.body.name;
   let description = req.body.description;
-  let img = req.file.url
+  let image = req.file.url
 
   Custom.create({
       name: name,
       description: description,
-      image: img
+      image: image
   })
   .then((custom)=>{
       res.redirect('/custom')
@@ -116,5 +116,27 @@ router.post('/create-routine', uploadMagic.single('photo') ,(req, res, next)=>{
       next(err);
   })
 })
+
+
+// document.getElementById('new-character-form').onsubmit = function(e) {
+
+//   e.preventDefault();
+
+//   let name = document.getElementById('new-name').value;
+//   let description = document.getElementById('new-dsecription').value;
+
+//   axios.post('/custom', {
+//     name: name,
+//     description: description,
+//   })
+//     .then(()=>{
+//       document.getElementById('new-name').value = "";
+//       document.getElementById('new-description').value = "";
+//     })
+//     .catch((err)=>{
+//         console.log(err);
+//     })
+// }
+
 
 module.exports = router;

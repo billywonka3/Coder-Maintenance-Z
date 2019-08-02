@@ -15,20 +15,20 @@
     <form action="/profile" method="POST" enctype="multipart/form-data" class="profile-div">
       <h3> Profile Page </h3>
       <p> Name: {{user.name}} </p>
-        <label> Edit : </label> 
-        <input id="edit-name" type="text">
+        <label> Edit Name : </label> 
+        <input id="edit-name" type="text" class=" white-input">
         <br>
       <p> City: {{user.city}} </p>
-        <label> Edit : </label> 
-        <input id="edit-city" type="text">
+        <label> Edit City : </label> 
+        <input id="edit-city" type="text" class=" white-input">
         <br>
       <p> Email: {{user.email}} </p>
-        <label> Edit : </label> 
-        <input id="edit-email" type="text">
+        <label> Update Email : </label> 
+        <input id="edit-email" type="text" class=" white-input">
         <br>
       <p> Password: </p>
-        <label> Edit : </label> 
-        <input id="edit-password" type="text">
+        <label> Change Password : </label> 
+        <input id="edit-password" type="text" class=" white-input">
         <br>
       <button id="update-btn">Update Profile</button>
       {{!-- <div>
@@ -41,36 +41,42 @@
     <hr>
 
     <div id="custom-section">
-      {{!-- <div class="leftside">
+      <div class="rightside">
+        <form id="new-exercise-form" class="exercise-form"
+         {{!-- action="/profile" method="POST" enctype="multipart/form-data" --}}
+        >
+          <h4>Add a Stretch to your Routines </h4>
+
+            <label>Name of Exercise</label>
+            <input id="new-title" type="text" name="name" class=" white-input">
+
+
+            <label>Write a Brief Description</label>
+            <input id="new-description" type="text" name="description" class=" white-input">
+
+            <br>
+
+            {{!-- <label>Upload an Image</label>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+              <input id="new-image" type="file" name="image">
+              <input type="submit" value="Save" class="save-btn">
+            </form> --}}
+
+            <br>
+
+          <button id="send-data">Create Card</button>
+          <a href="/custom" class="routines-link"> See Routines List </a>
+        </form>
+
+        {{!-- <div class="leftside">
           <h4> Custom Routine </h4>
           <button id="custom-btn"> Show Routine </button>
           <div id="list-of-custom">
             
-          </div>
+        </div>
+
       </div> --}}
 
-      <div class="rightside">
-        <form action="/profile" method="POST" enctype="multipart/form-data">
-          <h4>Add a Stretch to your Routines </h4>
-
-            <label>Name of Exercise</label>
-            <input id="new-title" type="text">
-
-
-            <label>Write a Brief Description</label>
-            <input id="new-description" type="text">
-
-            <br>
-            <label>Upload an Image</label>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-              <input id="new-image" type="file" name="photo">
-              <input type="submit" value="Save">
-            </form>
-            <br>
-
-          <button href="/custom" id="add-new-btn">Create Card</button>
-          <a href="/custom" class="routines-link"> See Routines List </a>
-        </form>
       </div>
 
     </div>
