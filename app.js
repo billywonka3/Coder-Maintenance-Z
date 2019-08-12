@@ -109,6 +109,9 @@ app.use('/', index);
 const userRoutes = require('./routes/userRoutes');
 app.use("/", userRoutes);
 
+const customRoutes = require('./routes/customRoutes');
+app.use("/", customRoutes);
+
 const bodyRoutes = require('./routes/bodyRoutes');
 app.use("/", bodyRoutes);
 // ==========================================

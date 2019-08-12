@@ -1,0 +1,38 @@
+<body #id="custom-page" bgcolor="######" style="color:white">
+  <h1> Custom Routine </h1>
+  <div id="profile-buttons">
+    <a href="/profile">
+      <button class="main-btn"> Profile </button>
+    </a>
+    <a href="/main">
+      <button class="main-btn">Back to Main</button>
+    </a>
+    <form action="/logout" method="POST">
+      <button class="main-btn">Logout</button>
+    </form>
+  </div>  
+
+
+  <div class="customList">
+    {{#each allCustom}}
+      <div class="customBox">
+        <a href="/custom/edit/{{this._id}}">{{this.name}}</a>
+        <p> Description: {{this.description}} </p>
+      </div>
+      
+      <button>
+        <a href="/custom/edit/{{this._id}}">Edit Stretch</a>
+      </button>
+
+      <form action="/custom/delete/{{this._id}}" method="POST">
+        <button>Delete Stretch </button>
+      </form>
+      <br/> 
+    {{/each}}
+  </div>
+
+  <br/>
+
+  <a href="/custom/create"> Add Custom Stretch </a>
+
+</body>

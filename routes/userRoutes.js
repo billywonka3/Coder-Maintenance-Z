@@ -4,12 +4,11 @@ const router        = express.Router();
 const bcrypt        = require('bcrypt');
 
 const User          = require('../models/user');
-const Custom        = require('../models/custom');
 
 const passport      = require('passport');
 const ensureLogin   = require("connect-ensure-login");
 
-const uploadMagic   = require('../config/cloundinary-setup');
+// const uploadMagic   = require('../config/cloundinary-setup');
 
 
 // Sign-Up Route
@@ -66,77 +65,34 @@ router.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("user/profile-edit", { user: req.user });
 });
 
+router.get('/profile', (req, res, next) => {
+  User.find()
+  .then(user => {
+    // res.locals.theMsg = "You are viewing the list of Custom!";
+    res.render('user/profile-edit', {user});
+  }).catch(err => next(err));
+});
+
 // router.get('/profile', (req, res, next)=>{
-//   Custom.findById(req.params.customID)
+//   User.findById(req.params.userID)
 //     .then((user)=>{
-//             res.render('user/profile-edit', {customRoutines: user})
+//             res.render('user/profile-edit', {userRoutines: user})
 //     })
 //     .catch((err)=>{
 //         next(err);
 //     })
 // })
 
-// router.post("/profile", (req, res, next)=>{
-//   let theID = req.params.customID;
-//   Custom.findByIdAndUpdate(theID, req.body)
-//     .then((custom)=>{
-//         res.render('user/profile-edit'+customID)
-//     })
-//     .catch((err)=>{
-//         next(err);
-//     })
-// })
-
-
-// Custom Routines Page
-router.get('/custom', (req, res, next)=>{
-  Custom.find()
-  .then((theRoutine)=>{
-      res.render("user/custom", {exercise: theRoutine})
-  })
-  .catch((err)=>{
-      next(err);
-  })
+router.post("/profile", (req, res, next)=>{
+  let theId = req.params.userId;
+  User.findByIdAndUpdate(theId, req.body)
+    .then((userID)=>{
+        res.render('user/profile-edit'+userId)
+    })
+    .catch((err)=>{
+        next(err);
+    })
 })
-
-router.post('/create-routine', uploadMagic.single('image') ,(req, res, next)=>{
-  let name = req.body.name;
-  let description = req.body.description;
-  let image = req.file.url
-
-  Custom.create({
-      name: name,
-      description: description,
-      image: image
-  })
-  .then((custom)=>{
-      res.redirect('/custom')
-  })
-  .catch((err)=>{
-      next(err);
-  })
-})
-
-
-// document.getElementById('new-character-form').onsubmit = function(e) {
-
-//   e.preventDefault();
-
-//   let name = document.getElementById('new-name').value;
-//   let description = document.getElementById('new-dsecription').value;
-
-//   axios.post('/custom', {
-//     name: name,
-//     description: description,
-//   })
-//     .then(()=>{
-//       document.getElementById('new-name').value = "";
-//       document.getElementById('new-description').value = "";
-//     })
-//     .catch((err)=>{
-//         console.log(err);
-//     })
-// }
 
 
 module.exports = router;

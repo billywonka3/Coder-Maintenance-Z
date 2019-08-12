@@ -4,13 +4,13 @@ const Schema   = mongoose.Schema;
 
 
 const customSchema = new Schema({
-  image: {
-    type: String
-  },
+  // image: {
+  //   type: String
+  // },
   name: {
     type: String
   },
-  desciption: {
+  description: {
     type: String
   }
 }, { timestamps: true });

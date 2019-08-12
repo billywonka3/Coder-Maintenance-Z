@@ -9,7 +9,7 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-const neckArray = [
+const stretchArray = [
   {
     causes: '',
     smr: '',
@@ -20,7 +20,7 @@ const neckArray = [
 
 
 // ------- Create -------
-PainZones.create(celebArray)
+PainZones.create(stretchArray)
 .then(()=>{
   console.log('it worked')
   mongoose.disconnect()

@@ -1,0 +1,17 @@
+<body #id="custom-page" bgcolor="######" style="color:white">
+
+  <h2>Edit Details for {{customDetail.name}}</h2>
+
+  <form action="/movie/update/{{customDetail._id}}" method="POST">
+
+    <label>Name</label>
+    <input name="name" type="text" value="{{customDetail.name}}">
+
+    <label>Description</label>
+    <input name="description" type="text" value="{{customDetail.description}}">
+
+    <button> Save Changes </button>
+
+  </form>
+
+</body>

@@ -1,0 +1,113 @@
+<body #id="custom-page" bgcolor="######" style="color:white">
+  <h1> Custom Routine </h1>
+  <div id="profile-buttons">
+    <a href="/profile">
+      <button class="main-btn"> Profile </button>
+    </a>
+    <a href="/main">
+      <button class="main-btn">Back to Main</button>
+    </a>
+    <form action="/logout" method="POST">
+      <button class="main-btn">Logout</button>
+    </form>
+  </div>  
+
+{{!-- {{#each stretch}}
+  <div class="smr-card">
+    <img src="${{stretch.image}}">
+    <p class="card-name"> ${{stretch.name}} </p>
+    <p class="directions"> ${{stretch.description}} </p>
+  </div>
+  <hr>
+{{/each}} --}}
+
+  <div class="custom-container">
+      <h3>Custom Routine</h3>
+
+      <section class="operations">
+        <div class="operation">
+          <button id="fetch-all">Fetch all</button>
+        </div>
+        <div class="operation">
+          <label for="custom-id">Search by ID: </label>
+          <input type="text" id="custom-id">
+          <button id="fetch-one">Fetch one</button>
+        </div>
+        <div class="operation delete">
+          <label for="custom-id-delete">Delete by ID: </label>
+          <input type="text" id="custom-id-delete">
+          <button id="delete-one">Delete one</button>
+        </div>
+      </section>
+  </div>
+
+
+  <div class="form-container">
+    {{!-- <form action="/custom" method="POST" enctype="multipart/form-data"> --}}
+    <form id="newCustomForm" class="custom-form"></form>
+      <h4>Add a Stretch to your Routines </h4>
+        <div class="field"></div>
+          <label for="name">Name of Exercise</label>
+          <input id="name" type="text">
+        </div>
+
+        <div class="field"></div>
+          <label for="description">Write a Brief Description</label>
+          <input id="description" type="text">
+        </div>
+
+        <br>
+        {{!-- <label>Upload an Image</label>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <input id="new-image" type="file" name="photo">
+          <input type="submit" value="Save">
+        </form>
+        <br> --}}
+
+      <button class="submit-button" id="add-new-btn">Create Card</button>
+      {{!-- <a href="/custom" class="routines-link"> See Routines List </a> --}}
+    </form>
+  </div>
+
+  <div class="form-container">
+    <form id="edit-customForm" class="custom-form">
+      <h4>Add a Stretch to your Routines </h4>
+        <div class="field"></div>
+          <label for="name">Name of Exercise</label>
+          <input id="name" type="text">
+        </div>
+
+        <div class="field"></div>
+          <label for="description">Write a Brief Description</label>
+          <input id="description" type="text">
+        </div>
+
+        <br>
+        {{!-- <label>Upload an Image</label>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <input id="new-image" type="file" name="photo">
+          <input type="submit" value="Save">
+        </form>
+        <br> --}}
+
+      <button class="submit-button" id="add-new-btn">Create Card</button>
+      {{!-- <a href="/custom" class="routines-link"> See Routines List </a> --}}
+    </form>
+  </div>
+{{!-- <div class="customList">
+  {{#each allCustom}}
+    <div class="customBox">
+      <a href="/custom/detail/{{this._id}}">{{this.name}}</a>
+    </div>
+
+    <form action="/custom/delete/{{this._id}}" method="POST">
+      <button class="btn">Delete Stretch </button>
+    </form>
+    <hr> 
+  {{/each}}
+
+  <hr>
+
+</div> --}}
+
+</body>

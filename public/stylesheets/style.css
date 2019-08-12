@@ -200,12 +200,7 @@ make it thinner, then set it to again wrap around the entire parent element.
   font-size: 18px;
   text-align: center;
 }
-.x-camera {
-position: absolute;
-top: 125px;
-right: 125px;
-width: 300px;
-}
+
 #custom-page {
   padding: 50px;
 }
@@ -532,8 +527,25 @@ width: 300px;
 
 /*------------------ Profile Page ------------------*/
 .profile-div {
-  padding: 0 100px;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.profile-div div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-profile-div {
+  width: 450px;
+}
+.right-profile-div {
+  width: 550px;
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+}
+.form-div {
+  padding-left: 100px;
+  /* width: 50%; */                      
 }
 .white-input {
   color: white;
@@ -541,14 +553,28 @@ width: 300px;
 .save-btn {
   color: black;
 }
-#profile-buttons {
-  position: absolute;
-  top: 40px;
-  right: 50px;
-  display: flex;
-}
 .main-btn {
-  margin-right: 100px;
+  margin: 0 10px;
+}
+
+#profile-buttons {
+  /* position: absolute;
+  top: 40px;
+  right: 50px; */        
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px;
+  padding: 25px;
+  /* border: solid; */
+}
+.x-camera {
+/* position: absolute;
+top: 125px;
+right: 125px; */
+width: 400px;
+display: flex;
+justify-content: center;
+margin-bottom: 50px;
 }
 
 #custom-section{
@@ -787,6 +813,8 @@ width: 300px;
     background-color:rgba(212, 199, 199, 0.1);
     backdrop-filter: alpha(opacity=10);
     border-radius: 20px;
+    /* display: flex;
+    flex-shrink: 2; */
     -webkit-filter: alpha(opacity=10);
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
