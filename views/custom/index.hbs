@@ -16,7 +16,9 @@
   <div class="customList">
     {{#each allCustom}}
       <div class="customBox">
-        <a href="/custom/edit/{{this._id}}">{{this.name}}</a>
+        <a 
+        {{!-- href="/custom/details/{{this._id}}" --}}
+        >Name: {{this.name}}</a>
         <p> Description: {{this.description}} </p>
       </div>
       
@@ -25,7 +27,7 @@
       </button>
 
       <form action="/custom/delete/{{this._id}}" method="POST">
-        <button>Delete Stretch </button>
+        <button> Delete Stretch </button>
       </form>
       <br/> 
     {{/each}}

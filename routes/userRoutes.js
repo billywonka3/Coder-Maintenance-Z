@@ -65,18 +65,18 @@ router.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("user/profile-edit", { user: req.user });
 });
 
-router.get('/profile', (req, res, next) => {
+router.get("/profile", (req, res, next) => {
   User.find()
   .then(user => {
     // res.locals.theMsg = "You are viewing the list of Custom!";
-    res.render('user/profile-edit', {user});
+    res.render("user/profile-edit", {user});
   }).catch(err => next(err));
 });
 
-// router.get('/profile', (req, res, next)=>{
+// router.get("/profile", (req, res, next)=>{
 //   User.findById(req.params.userID)
 //     .then((user)=>{
-//             res.render('user/profile-edit', {userRoutines: user})
+//             res.render("user/profile-edit", {userRoutines: user})
 //     })
 //     .catch((err)=>{
 //         next(err);

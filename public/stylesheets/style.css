@@ -9,13 +9,14 @@ a {
 /*------------------ Landing Page ------------------*/
 #login-bar {
   height: 40px;
+  font-weight: bold;
   background-color: #89dda5;
   display: flex;
   justify-content: space-around;
   font-size: 18px; }
 #login-bar > div > a {
   position: absolute;
-  top: -15px;
+  top: -10px;
 }
 
 .landing-background {
@@ -56,14 +57,25 @@ a {
   padding: 0 30%;
   width: 100vw;
 }
+/* .z-box {
+  position: absolute;
+  top: 30px;
+  left: 250px;
+  background:grey;
+  opacity: 0.7;
+  border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+  z-index: 1; */
+}
 
-/* .landing-wrap {
+.landing-wrap {
   display: flex;
-  justify-content: space-evenly;
   flex-flow: row wrap;
-} */
+}
 .circle-divs {
   width: 255px;
+  margin: 0 20px;;
 }
 .image-cropper {
   width: 250px;

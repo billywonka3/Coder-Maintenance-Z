@@ -39,7 +39,7 @@ router.post('/custom/create', (req, res, next) => {
 router.get('/edit/:customId', (req, res, next)=>{
   Custom.findById(req.params.customId)
     .then((customFromDb)=>{
-      res.render('custom/details', {customDetail: customFromDb})
+      res.render('custom/edit', {Custom: customFromDb})
     })
     .catch((err)=>{
         next(err);
@@ -49,8 +49,8 @@ router.get('/edit/:customId', (req, res, next)=>{
 router.post('/update/:customId', (req, res, next)=>{
   let theId = req.params.customId;
   Custom.findByIdAndUpdate(theId, req.body)
-    .then((custom)=>{
-        res.render('custom/details/'+customId)
+    .then((customId)=>{
+        res.redirect('/custom/custom-index')
     })
     .catch((err)=>{
         next(err);
@@ -60,6 +60,7 @@ router.post('/update/:customId', (req, res, next)=>{
 router.post('/custom/delete/:customId', (req, res, next) => {
   Custom.findByIdAndRemove(req.params.customId)
   .then(() => {
+    console.log(req.params.customId)
     res.redirect('/custom/custom-index');
   }).catch(err => next(err));
 });
