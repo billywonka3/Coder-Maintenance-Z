@@ -685,8 +685,19 @@ margin-bottom: 50px;
   width: 16vw;
 }
 .x-long {
-  width: 24vw;
+  width: 20vw;
 }
+.tall {
+  height: 28vh;
+  padding-top: 2vh;
+}
+.causes-text {
+  padding: 0 6vw;
+}
+/* .text-div {
+  padding: 0 2vw;
+} */
+
 .bottom-windows {
   height: 60vh;
   display: flex;
