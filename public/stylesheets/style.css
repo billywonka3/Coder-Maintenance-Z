@@ -621,8 +621,8 @@ margin-bottom: 50px;
 
 /*------------------ Main Pain Page ------------------*/
 .main-div {
-  height: 100vh;
-  width: 100vw;
+  height: 99vh;
+  width: 99vw;
   /* padding: 10px; */
   text-align: center;
   display: flex;
@@ -631,13 +631,13 @@ margin-bottom: 50px;
 }
 
 .visual-nav {
-  height: 99vh;
+  height: 989vh;
   /* width: auto; */
   /* border-style: solid; */
   /* border-color: rgb(22, 134, 204);; */
 }
 .visual-nav img {
-  height: 98.65vh;
+  height: 97.65vh;
   padding-top: 0.35vh;
   z-index: -2;
 }
@@ -646,8 +646,8 @@ margin-bottom: 50px;
 }
 
 .R-div {
-  height: 99vh;
-  width: 99vw;
+  height: 98vh;
+  width: 98vw;
   /*margin-left: 10px;
   */display: flex;
   flex-direction: column;
