@@ -46,7 +46,7 @@ router.get("/wrists", ensureLogin.ensureLoggedIn(), (req, res) => {
 // router.get("/main", (req, res, next) => {
 //   axious.get('____')
 //     .then(painDetails) => {
-//       axious.get(`${painDetails.data.fomrs[0].url}`)
+//       axious.get(`${painDetails.data.forms[0].url}`)
 //         .then(formInfo => {
 //           console.log(formInfo.data)
 //           console.log(painDetails.data)
