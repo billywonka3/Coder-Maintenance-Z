@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
 body {
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: black;
+}
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+}
 
 /*------------------ Landing Page ------------------*/
 #login-bar {
   height: 40px;
   font-weight: bold;
+  font-style: italic;
   background-color: #89dda5;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 18px; }
 #login-bar > div > a {
-  position: absolute;
-  top: -10px;
+  position: relative;
+  top: 8px;
 }
 
 .landing-background {
@@ -27,36 +30,18 @@ a {
   font-size: 22px;
   text-align: center;
 }
-#landing-title {
-  width: 100vw;
-  padding: 50px 20% 10px 20% ;
-}
-#landing-title p {
-  display: flex;
-  justify-content: center;
-  padding: 0 20%;
-  width: 100vw;
-  /* color: rgb(32, 116, 185) */
-}
 #landing-text {
-  width: 80vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #landing-text p {
-  display: flex;
-  justify-content: center;
-  padding: 0 25%;
-  width: 100vw;
-  /* color: ; */
+  padding: 0 40px;
+  min-width: 250px;
+  max-width: 470px;
 }
-#landing-text2 {
-  width: 80vw;
-}
-#landing-text2 p {
-  display: flex;
-  justify-content: center;
-  padding: 0 30%;
-  width: 100vw;
-}
+
 .z-box {
   position: absolute;
   top: 30px;
@@ -365,7 +350,9 @@ make it thinner, then set it to again wrap around the entire parent element.
   text-align: center;
   margin-bottom: 20px;
 }
-.signin-form .form-group {
+.form-group {
+  display: flex;
+  justify-content: center; 
   margin-bottom: 20px;
 }
 .signin-form .btn {        
@@ -621,50 +608,54 @@ margin-bottom: 50px;
 
 /*------------------ Main Pain Page ------------------*/
 .main-div {
-  height: 50vh;
-  width: 60vw;
-  /* padding: 0 15px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .visual-nav {
-  height: 99vh;
-  width: 600px;
-  /* border-style: solid; */
-  /* border-color: rgb(22, 134, 204);; */
-  /* z-index: 2; */
+  height: 800px;
+  width: 594px;
+  border-style: solid;
+  border-color: white;
+  overflow: hidden;
 }
 .visual-nav img {
-  height: 98.65vh;
-  padding-top: 0.35vh;
-  z-index: -2;
+  height: 800px;
+  padding-top: 3px;
+
 }
 .visual-nav button {
   font-style: italic;
+  z-index: 1;
 }
 
 .R-div {
-  height: 99vh;
+  height: 800px;
   width: 600px;
-  /*margin-left: 10px;
-  */display: flex;
+  /*margin-left: 10px;*/
+  display: flex;
   flex-direction: column;
-  background: #45484d;
-  /*Oldbrowsers*/background: -moz-linear-gradient(45deg, #45484d 0%, #000000 100%);
-  /*FF3.6-15*/background: -webkit-linear-gradient(45deg, #45484d 0%,#000000 100%);
-  /*Chrome10-25,Safari5.1-6*/background: linear-gradient(45deg, #45484d 0%,#000000 100%);
-  color: white;}
+  background: #45484d; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  /* border-style: solid;
+  border-color: green; */
+  -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
+}
 .R-div h6 {
   font-weight: bold;
   margin-bottom: 12px;
 }
 
 .top-window {
-  height: 40vh;
-  padding: 0 12px;
+  height: 310px;
+  padding: 0 50px;
   border-style: solid;
   border-bottom: none;
   /* border-color: rgb(84, 170, 223); */
@@ -675,20 +666,20 @@ margin-bottom: 50px;
   justify-content: space-evenly;
 }
 .short {
-  height: 16vh;
-  width: 12vw;
+  height: 130px;
+  width: 150px;
 }
 .long {
-  height: 16vh;
-  width: 16vw;
+  height: 130px;
+  width: 180px;
 }
 .x-long {
-  height: 16vh;
-  width: 20vw;
+  height: 130px;
+  width: 200px;
 }
 .tall {
-  height: 28vh;
-  padding-top: 2vh;
+  height: 250px;
+  padding-top: 2px;
 }
 .causes-text {
   padding: 0 6vw;
@@ -698,12 +689,12 @@ margin-bottom: 50px;
 } */
 
 .bottom-windows {
-  height: 60vh;
+  height: 490px;
   display: flex;
   flex-direction: row;
 }
 .bottom-L-window {
-  height: 60vh;
+  height: 490px;
   width: 50%;
   padding: 0 7px;
   border-style: solid;
@@ -711,7 +702,7 @@ margin-bottom: 50px;
   overflow: auto;
 }
 .bottom-R-window {
-  height: 60vh;
+  height: 490px;
   width: 50%;
   padding: 0 7px;
   border-style: solid;
@@ -728,8 +719,8 @@ margin-bottom: 50px;
   margin-bottom: 10px;
 }
 .smr-card > img {
-  width: 14vw;
-  margin: 5px 0;
+  width: 175px;
+  margin: 2px 0;
 }
 .stretch-card {
   border-style: solid;
@@ -739,8 +730,8 @@ margin-bottom: 50px;
   margin-bottom: 10px;
 }
 .stretch-card > img {
-  width: 14vw;
-  margin: 5px 0;
+  width: 175px;
+  margin: 2px 0;
 }
 .card-title {
   font-style: italic;
@@ -781,7 +772,7 @@ margin-bottom: 50px;
     left top,
     color-stop(0.44, rgb(122,153,217)),
     color-stop(0.72, rgb(73,125,189)),
-    color-stop(0.86, rgb(28,58,148))
+    color-stop(0.86, rgb(28,58,148))thin
   );
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;

@@ -1,47 +1,15 @@
-{{!-- Top Nav Bar --}}
-<script>
-  function openNav() {
-      document.getElementById("sideNavigation").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  function closeNav() {
-      document.getElementById("sideNavigation").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-  }
-</script>
-
-<nav class="topnav">
-    <div class="topnav-left">
-      <a href="#" onclick="openNav()">
-        <svg width="30" height="30" id="icoOpen">
-            <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
-            <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
-            <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
-        </svg>
-      </a>
-    </div>
-  {{!-- <div class="topnav-right">
-    <a href="/profile"><img class="gear-link" src="images/Gear-8s-200px.gif"></a>
-    <a class="profile-link" href="/profile"> Profile </a>
-  </div> --}}
-</nav>
-
-{{!-- Visual Sidenav for Neck, Shoulders, Lowerback, Wrists --}}
-
-  <div class="visual-nav" id="sideNavigation" >
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
+<div class="main-div">
+  {{!-- Visual Sidenav for Neck, Shoulders, Lowerback, Wrists --}}
+  <div class="visual-nav">
     <img src="images/back-nav.jpg" alt="visual-nav">
-    
     <div class="neck-frwd-btn">
-      <button class="glow-on-hover" type="button" onclick="window.location.href='/neck-lean'"> 
-        Neck <br> (Forward Lean)
+      <button class="glow-on-hover" type="button" onclick="window.location.href='/neck-lean'">  
+        Neck <br/> (Forward Lean)
       </button>
     </div>
     <div class="neck-asym-btn">
       <button class="glow-on-hover" type="button" onclick="window.location.href='/neck-asym'"> 
-        Neck (Asymmetry)
+        Neck <br/> (Asymmetry)
         </button>
     </div>
     <div class="shoulders-btn">
@@ -51,17 +19,17 @@
     </div>
     <div class="back-frwd-btn">
       <button class="glow-on-hover" type="button" onclick="window.location.href='/back-lean'"> 
-        Lowerback (Forward Lean)
+        Lowerback <br/> (Forward Lean)
       </button>
     </div>
     <div class="back-rnd-btn">
       <button class="glow-on-hover" type="button" onclick="window.location.href='/back-rnd'"> 
-        Lowerback (Rounded)
+        Lowerback <br/> (Rounded)
       </button>
     </div>
     <div class="back-asym-btn">
       <button class="glow-on-hover" type="button" onclick="window.location.href='/back-asym'"> 
-        Lowerback (Asymmetry)
+        Lowerback <br/> (Asymmetry)
       </button>
     </div>
     <div class="wrists-btn1">
@@ -76,24 +44,21 @@
     </div>
   </div>
 
-
-  {{!-- AJAX Windows --}}
+  {{!-- Right Windows --}}
   <div class="main-div" id="main">
     <div class="R-div">
       <div class="top-window style-7">
-        <div>
-          <div> 
-            <h6> Causes & Corrections</h6>
+        <div class="causes">
+          <div> <h3> Causes & Corrections </h3> </div>
+          <div class="text-div">
+            <p> The "repetitive stress" of sitting in one position for long periods of time leads some muscles to tense up more than others. <br/><br/>
+                As such, one of the simplest ways to fix this is to change the way you position yourself while in your workspace. </p>
           </div>
           <div class="image-row" style="padding: 1vw">
             <img class="tall" src="images/homer-ergo.jpg">
-            <div style="padding: 0 20px">
-              <p> The "repetitive stress" of sitting in one position for long periods of time leads some muscles to tense up more than others. <br/><br/>
-                  As such, one of the simplest ways to fix this is to change the way you position yourself while in your workspace. </p>
-            </div>
             <img class="tall" src="images/ergo-nomics-good-enough.jpg">
           </div>
-          <div class="causes-text">
+          <div class="text-div">
             <p> Much like Yoga, ergonomics is all about finding the most efficient and effortless positioning. 
                 Good posture in this case, usually refers to the position of our neck, lower back, shoulders, elbows, and wrists.
                 It doesn't matter if you are sitting, standing, or reclining - as long as these areas are properly supported and aligned! </p>
@@ -109,7 +74,7 @@
       <div class="bottom-windows">
         <div class="bottom-L-window style-7 smr">
           <div>
-            <h6> SMR Pressure-Point Massage</h6>
+            <h4> SMR Pressure-Point Massage</h4>
           </div>
           <div class="smr-card ">
             <img src="images/smr/common-trigger-points.jpg">
@@ -125,7 +90,7 @@
 
         <div class="bottom-R-window style-7 stretch">
           <div>
-            <h6> Follow-up Stretches </h6> 
+            <h4> Follow-up Stretches </h4> 
           </div>
           <div class="stretch-card">
             <img src="images/stretching-conference.jpg">
@@ -137,3 +102,4 @@
       </div>
     </div>
   </div>
+</div>
