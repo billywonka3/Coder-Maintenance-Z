@@ -681,12 +681,13 @@ margin-bottom: 50px;
   height: 250px;
   padding-top: 2px;
 }
-.causes-text {
-  padding: 0 6vw;
+.top-box {
+  border: 4px double white;
+  border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
 }
-/* .text-div {
-  padding: 0 2vw;
-} */
+
 
 .bottom-windows {
   height: 490px;
