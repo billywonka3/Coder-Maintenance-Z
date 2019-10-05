@@ -678,6 +678,11 @@ margin-bottom: 50px;
   width: 100px;
   padding-top: 2px;
 }
+.x-tall {
+  height: 225px;
+  width: 170px;
+  padding-top: 2px;
+}
 .short {
   height: 130px;
   width: 150px;
