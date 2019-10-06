@@ -60,7 +60,7 @@ a {
 }
 .circle-divs {
   width: 255px;
-  margin: 0 20px;;
+  margin: 0 20px;
 }
 .image-cropper {
   width: 250px;
@@ -70,6 +70,7 @@ a {
   border-radius: 50%;
   display: flex;
   justify-content: space-evenly;
+  background: black;
 }
 .ergo-circle {
   margin: 0 auto;
@@ -680,7 +681,7 @@ margin-bottom: 50px;
 }
 .x-tall {
   height: 225px;
-  width: 170px;
+  width: 165px;
   padding-top: 2px;
 }
 .short {
