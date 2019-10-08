@@ -73,26 +73,20 @@ router.get("/profile", (req, res, next) => {
   }).catch(err => next(err));
 });
 
-// router.get("/profile", (req, res, next)=>{
-//   User.findById(req.params.userID)
-//     .then((user)=>{
-//             res.render("user/profile-edit", {userRoutines: user})
-//     })
-//     .catch((err)=>{
-//         next(err);
-//     })
-// })
+router.get("/profile", (req, res, next)=>{
+  User.findById(req.params.userID)
+  .then((user)=>{
+    res.render("user/profile-edit", {userRoutines: user});
+  }).catch(err => next(err));
+});
 
 router.post("/profile", (req, res, next)=>{
   let theId = req.params.userId;
   User.findByIdAndUpdate(theId, req.body)
-    .then((userID)=>{
-        res.render('user/profile-edit'+userId)
-    })
-    .catch((err)=>{
-        next(err);
-    })
-})
+  .then((theId)=>{
+    res.render('user/profile-edit'+theId)
+  }).catch(err => next(err));
+});
 
 
 module.exports = router;

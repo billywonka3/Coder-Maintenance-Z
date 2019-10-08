@@ -536,19 +536,20 @@ make it thinner, then set it to again wrap around the entire parent element.
 }
 .left-profile-div {
   width: 450px;
+  padding-top: 35px;
 }
 .right-profile-div {
-  width: 550px;
+  width: 450px;
   display: flex;
   justify-content: center; 
   flex-wrap: wrap;
 }
 .form-div {
-  padding-left: 100px;
+  padding-left: 80px;
   /* width: 50%; */                      
 }
-.white-input {
-  color: white;
+.input-color {
+  color: #00B7FF;
 }
 .save-btn {
   color: black;
@@ -571,7 +572,7 @@ make it thinner, then set it to again wrap around the entire parent element.
 /* position: absolute;
 top: 125px;
 right: 125px; */
-width: 400px;
+width: 300px;
 display: flex;
 justify-content: center;
 margin-bottom: 50px;
