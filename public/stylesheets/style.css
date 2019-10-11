@@ -59,12 +59,12 @@ a {
   flex-flow: row wrap;
 }
 .circle-divs {
-  width: 255px;
+  width: 205px;
   margin: 0 20px;
 }
 .image-cropper {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   /* position: relative; */
   overflow: hidden;
   border-radius: 50%;
