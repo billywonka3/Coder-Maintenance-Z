@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+}
+
 body {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: black;
@@ -30,6 +40,10 @@ a {
   font-size: 22px;
   text-align: center;
 }
+#landing-title {
+  position: relative;
+  top: 10px;
+}
 #landing-text {
   text-align: center;
   display: flex;
@@ -38,39 +52,91 @@ a {
 }
 #landing-text p {
   padding: 0 40px;
-  min-width: 250px;
-  max-width: 470px;
+  min-width: 60vw;
+  max-width: 85vw;
 }
-
-.z-box {
-  position: absolute;
-  top: 30px;
-  left: 250px;
-  background:grey;
-  opacity: 0.7;
-  border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-  z-index: 1;
-}
-
 .landing-wrap {
   display: flex;
   flex-flow: row wrap;
 }
-.circle-divs {
-  width: 205px;
-  margin: 0 20px;
+.circle-divs > p {
+  position: relative;
+  bottom: 5px;
 }
-.image-cropper {
-  width: 200px;
-  height: 200px;
-  /* position: relative; */
-  overflow: hidden;
-  border-radius: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  background: black;
+@media only screen and (max-width: 415px) {
+  #landing-title {
+    font-size: 18px;
+  }
+  #landing-text {
+    font-size: 16px;
+  }
+  .circle-divs > p {
+    font-size: 18px;
+  }
+  .circle-divs {
+    width: 190px;
+    margin: 0 20px;
+  }
+  .image-cropper {
+    width: 185px;
+    height: 185px;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #landing-title {
+    font-size: 26px;
+  }
+  #landing-text {
+    font-size: 20px;
+  }
+  .circle-divs > p {
+    font-size: 18px;
+  }
+  .circle-divs {
+    width: 155px;
+    margin: 0 20px;
+  }
+  .image-cropper {
+    width: 150px;
+    height: 150px;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #landing-title {
+    font-size: 26px;
+  }
+  #landing-text {
+    font-size: 22px;
+  }
+  .circle-divs > p {
+    font-size: 24x;
+  }
+  .circle-divs {
+    width: 205px;
+    margin: 0 20px;
+  }
+  .image-cropper {
+    width: 200px;
+    height: 200px;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+  }
 }
 .ergo-circle {
   margin: 0 auto;
@@ -78,7 +144,7 @@ a {
   height: 90%;
   width: auto;
 }
-.pressure-points {
+/* .pressure-points {
   margin: 0 auto;
   margin-right: 33%;
   height: 100%;
@@ -89,7 +155,8 @@ a {
   margin-left: 24%;
   height: 100%;
   width: auto;
-}
+} */
+
 /* ------------------ Animated Enter Button ------------------ */
 /* .position {
   margin-left: auto;
