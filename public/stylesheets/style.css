@@ -40,6 +40,15 @@ a {
   font-size: 22px;
   text-align: center;
 }
+#landing-box {
+  background: black;
+  opacity: 0.8;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
 #landing-title {
   position: relative;
   top: 10px;
@@ -105,9 +114,13 @@ a {
   .image-cropper {
     width: 150px;
     height: 150px;
-    /* position: relative; */
-    overflow: hidden;
+    /*position: relative;
+    */overflow: hidden;
     border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
     display: flex;
     justify-content: space-evenly;
     background: black;
@@ -121,7 +134,7 @@ a {
     font-size: 22px;
   }
   .circle-divs > p {
-    font-size: 24x;
+    font-size: 24px;
   }
   .circle-divs {
     width: 205px;
