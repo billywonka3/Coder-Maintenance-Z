@@ -697,149 +697,154 @@ margin-bottom: 50px;
   text-align: center;
 }
 
-.visual-nav {
-  height: 800px;
-  width: 594px;
-  border-style: solid;
-  border-color: white;
-  overflow: hidden;
-}
-.visual-nav img {
-  height: 800px;
-  padding-top: 3px;
 
-}
-.visual-nav button {
-  font-style: italic;
-  z-index: 1;
-}
+/* @media only screen and (min-width: 992px) { */
+  .visual-nav {
+    height: 800px;
+    width: 594px;
+    border-style: solid;
+    border-color: white;
+    overflow: hidden;
+  }
+  .visual-nav img {
+    height: 800px;
+    padding-top: 3px;
 
-.R-div {
-  height: 800px;
-  width: 600px;
-  /*margin-left: 10px;*/
-  display: flex;
-  flex-direction: column;
-  background: #45484d; /* Old browsers */
-  background: -moz-linear-gradient(45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  color: white;
-  /* border-style: solid;
-  border-color: green; */
-  -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
-}
-.R-div h6 {
-  font-weight: bold;
-  margin-bottom: 12px;
-}
+  }
+  .visual-nav button {
+    font-style: italic;
+    z-index: 1;
+  }
 
-.top-window {
-  height: 310px;
-  padding: 0 50px;
-  border-style: solid;
-  border-bottom: none;
-  /* border-color: rgb(84, 170, 223); */
-  overflow: auto;
-}
-.image-row {
-  display: flex;
-  justify-content: space-evenly;
-}
-.top-box {
-  border: 4px double white;
-  border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-  margin-top: 20px;
-  padding: 0 10px;
-}
-.tall {
-  height: 130px;
-  width: 100px;
-  padding-top: 2px;
-}
-.x-tall {
-  height: 225px;
-  width: 165px;
-  padding-top: 2px;
-}
-.short {
-  height: 130px;
-  width: 150px;
-}
-.long {
-  height: 130px;
-  width: 180px;
-}
-.x-long {
-  height: 130px;
-  width: 225px;
-}
-.xx-long {
-  height: 130px;
-  width: 300px;
-}
-.bottom-windows {
-  height: 490px;
-  display: flex;
-  flex-direction: row;
-}
-.bottom-L-window {
-  height: 490px;
-  width: 50%;
-  padding: 0 7px;
-  border-style: solid;
-  /* border-color: rgb(22, 134, 204); */
-  overflow: auto;
-}
-.bottom-R-window {
-  height: 490px;
-  width: 50%;
-  padding: 0 7px;
-  border-style: solid;
-  border-left: none;
-  /* border-color: rgb(34, 116, 167); */
-  overflow: auto;
-}
+  .R-div {
+    height: 800px;
+    width: 600px;
+    /*margin-left: 10px;*/
+    display: flex;
+    flex-direction: column;
+    background: #45484d; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: white;
+    /* border-style: solid;
+    border-color: green; */
+    -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
+  }
+  .R-div h6 {
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .top-window {
+    height: 310px;
+    padding: 0 50px;
+    border-style: solid;
+    border-bottom: none;
+    /* border-color: rgb(84, 170, 223); */
+    overflow: auto;
+  }
 
-.smr-card {
-  border-style: solid;
-  border-width: thin;
-  color: white;
-  padding: 5px 45px;
-  margin-bottom: 10px;
-}
-.smr-card > img {
-  width: 175px;
-  margin: 2px 0;
-}
-.stretch-card {
-  border-style: solid;
-  border-width: thin;
-  color: white;
-  padding: 5px 45px;
-  margin-bottom: 10px;
-}
-.stretch-card > img {
-  width: 175px;
-  margin: 2px 0;
-}
-.card-title {
-  font-style: italic;
-  text-decoration: underline;
-  margin-top: 7.5px;
-}
-.directions {
-  font-size: 14px;
-}
-.warning {
-  color: rgb(236, 60, 90);
-}
-.trapezius {
-  width: 188px;
-}
+  .image-row {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .top-box {
+    border: 4px double white;
+    border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .tall {
+    height: 130px;
+    width: 100px;
+    padding-top: 2px;
+  }
+  .x-tall {
+    height: 225px;
+    width: 165px;
+    padding-top: 2px;
+  }
+  .short {
+    height: 130px;
+    width: 150px;
+  }
+  .long {
+    height: 130px;
+    width: 180px;
+  }
+  .x-long {
+    height: 130px;
+    width: 225px;
+  }
+  .xx-long {
+    height: 130px;
+    width: 300px;
+  }
+
+  .bottom-windows {
+    height: 490px;
+    display: flex;
+    flex-direction: row;
+  }
+  .bottom-L-window {
+    height: 490px;
+    width: 50%;
+    padding: 0 7px;
+    border-style: solid;
+    /* border-color: rgb(22, 134, 204); */
+    overflow: auto;
+  }
+  .bottom-R-window {
+    height: 490px;
+    width: 50%;
+    padding: 0 7px;
+    border-style: solid;
+    border-left: none;
+    /* border-color: rgb(34, 116, 167); */
+    overflow: auto;
+  }
+
+  .smr-card {
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    padding: 5px 45px;
+    margin-bottom: 10px;
+  }
+  .smr-card > img {
+    width: 175px;
+    margin: 2px 0;
+  }
+  .stretch-card {
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    padding: 5px 45px;
+    margin-bottom: 10px;
+  }
+  .stretch-card > img {
+    width: 175px;
+    margin: 2px 0;
+  }
+  .card-title {
+    font-style: italic;
+    text-decoration: underline;
+    margin-top: 7.5px;
+  }
+  .directions {
+    font-size: 14px;
+  }
+  .warning {
+    color: rgb(236, 60, 90);
+  }
+  .trapezius {
+    width: 188px;
+  }
+
 
 /*------------------ Customized Div Scrollbars ------------------*/
 #style-7::-webkit-scrollbar-track
